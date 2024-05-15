@@ -19,6 +19,6 @@ const AppWrapper = () => {
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <AppWrapper />
   </React.StrictMode>,
 )
