@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../main";
 import { Navigate } from "react-router-dom";
-import axois from "axios";
+import axios from "axios";
 import { toast } from "react-toastify";
 import { GoCheckCircleFill } from "react-icons/go";
 import { AiFillCloseCircle } from "react-icons/ai";
@@ -52,7 +52,7 @@ const Dashboard = () => {
   return (
     <>
       <section className="dashboard page">
-      <div className="banner">
+        <div className="banner">
           <div className="firstBox">
             <img src="/doc.png" alt="docImg" />
             <div className="content">
@@ -134,4 +134,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard
+export default Dashboard;
