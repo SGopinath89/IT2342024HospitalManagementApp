@@ -45,7 +45,7 @@ const Login = () => {
   return (
     <>
       <section className="container form-component">
-        <img src="/logo.png" alt="logo" className="logo" />
+        <img src="/logo.png" alt="logo" className="logo"/>
         <h1 className="form-title">WELCOME TO VANNI HEALTHCARE</h1>
         <p>Only Admins are allowed to Access!</p>
         <form onSubmit={handleLogin}>
