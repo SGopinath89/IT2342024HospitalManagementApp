@@ -4,18 +4,17 @@ import { config } from "dotenv";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import fileUpload from "express-fileupload";
-//import { errorMiddleware } from "./middlewares/error.js";
-//import messageRouter from "./router/messageRouter.js";
-//import userRouter from "./router/userRouter.js";
-//import appointmentRouter from "./router/appointmentRouter.js";
+import { errorMiddleware } from "./middlewares/error.js";
+import messageRouter from "./router/messageRouter.js";
+import userRouter from "./router/userRouter.js";
+import appointmentRouter from "./router/appointmentRouter.js";
 
 const app = express();
 config({ path: "./config/config.env" });
-export default app;
 
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL, process.env.DASHBOARD_URL],
+    origin: [process.env.FRONTEND_URL_ONE, process.env.DASHBOARD_URL],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
@@ -32,37 +31,12 @@ app.use(
   })
 );
 
-//app.use("/api/v1/message", messageRouter);
 
-
-dbConnection();
-
-
-/*
-import express from "express";
-
-
-
-import { errorMiddleware } from "./middlewares/error.js";
-
-import userRouter from "./router/userRouter.js";
-import appointmentRouter from "./router/appointmentRouter.js";
-
-
-
-
-
-
-
-
-
-
+app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
 
-
+dbConnection();
 
 app.use(errorMiddleware);
 export default app;
-*/
-
